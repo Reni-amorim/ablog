@@ -6,7 +6,7 @@ set :application, "ablog"
 
 
 # Change these
-server '15.228.58.240', port: 22, roles: [:web, :app, :db], primary: true
+server '15.229.7.177', port: 22, roles: [:web, :app, :db], primary: true
 
 #############################3 TRY
 #set :rbenv_prefix, '/deploy/bin/rbenv exec'
