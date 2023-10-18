@@ -14,14 +14,14 @@ server '15.229.7.177', port: 22, roles: [:web, :app, :db], primary: true
 
 set :rbenv_type, :system
 set :rbenv_ruby,      '3.0.6'
-set :default_env, { 'RBENV_ROOT' => "$HOME/.rbenv" }
-set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} RBENV_ROOT=#{fetch(:rbenv_path)}"
+#set :default_env, { 'RBENV_ROOT' => "$HOME/.rbenv" }
+#set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} RBENV_ROOT=#{fetch(:rbenv_path)}"
 #set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 ##################### try
 #set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
-set :rbenv_ruby_dir,  '/home/deploy/.rbenv/versions/3.0.6'
-#set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
+#set :rbenv_ruby_dir,  '/home/deploy/.rbenv/versions/3.0.6'
+set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 
 
 # If using Digital Ocean's Ruby on Rails Marketplace framework, your username is 'rails'
