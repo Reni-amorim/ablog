@@ -18,8 +18,7 @@ set :rbenv_ruby,      '3.0.6'
 ##################### try
 #set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
-
-# set :rbenv_ruby_dir,  '/home/deploy/.rbenv/versions/3.0.2'
+set :rbenv_ruby_dir,  '/home/deploy/.rbenv/versions/3.0.6'
 #set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 
 
