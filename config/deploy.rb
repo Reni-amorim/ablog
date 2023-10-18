@@ -14,7 +14,7 @@ server '15.229.7.177', port: 22, roles: [:web, :app, :db], primary: true
 
 set :rbenv_type, :system
 set :rbenv_ruby,      '3.0.6'
-#set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 ##################### try
 #set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
