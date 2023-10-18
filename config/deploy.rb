@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.18.0"
 
-set :repo_url, "git@example.com:Reni-amorim/ablog.git"
+set :repo_url, "git@github.com:Reni-amorim/ablog.git"
 set :application, "ablog"
 
 
