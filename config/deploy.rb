@@ -8,7 +8,8 @@ set :application, "ablog"
 # Change these
 server '15.228.58.240', port: 22, roles: [:web, :app, :db], primary: true
 
-
+#############################3 TRY
+set :rbenv_prefix, '/deploy/bin/rbenv exec'
 
 set :rbenv_ruby,      '3.0.6'
 # set :rbenv_ruby_dir,  '/home/ubuntu/.rbenv/versions/3.0.2'
