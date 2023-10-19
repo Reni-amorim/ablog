@@ -2,7 +2,7 @@
 lock "~> 3.18.0"
 
 # Change these
-server '15.228.170.4', port: 22, roles: [:web, :app, :db], primary: true
+server '15.228.127.170', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url, "git@github.com:Reni-amorim/ablog.git"
 set :application, "ablog"
