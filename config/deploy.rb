@@ -28,7 +28,12 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
 #set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 
-set :default_env, { 'RBENV_ROOT' => '/home/deploy/.rbenv', 'PATH' => '$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH' }
+#set :default_env, { 'RBENV_ROOT' => '/home/deploy/.rbenv', 'PATH' => '$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH' }
+
+set :default_env, {
+  'RBENV_ROOT' => '/home/deploy/.rbenv',
+  'PATH' => '$RBENV_ROOT/shims:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/deploy/.rvm/bin:$PATH'
+}
 
 
 ##########################################################################################################
