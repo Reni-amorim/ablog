@@ -8,6 +8,7 @@ set :application, "ablog"
 # Change these
 server '15.229.7.177', port: 22, roles: [:web, :app, :db], primary: true
 
+#######################################################################################################
 #############################3 TRY
 #set :rbenv_prefix, '/deploy/bin/rbenv exec'
 
@@ -25,9 +26,12 @@ set :rbenv_ruby_dir,  '/home/deploy/.rbenv/versions/3.0.6'
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
 
-set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
+#set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
+
+set :default_env, { 'RBENV_ROOT' => '/home/deploy/.rbenv', 'PATH' => '$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH' }
 
 
+##########################################################################################################
 # If using Digital Ocean's Ruby on Rails Marketplace framework, your username is 'rails'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
