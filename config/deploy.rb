@@ -1,39 +1,42 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.18.0"
 
+# Change these
+server '15.228.170.4', port: 22, roles: [:web, :app, :db], primary: true
+
 set :repo_url, "git@github.com:Reni-amorim/ablog.git"
 set :application, "ablog"
 
 
-# Change these
-server '15.229.7.177', port: 22, roles: [:web, :app, :db], primary: true
+
 
 #######################################################################################################
 #############################3 TRY
 #set :rbenv_prefix, '/deploy/bin/rbenv exec'
 
 
-set :rbenv_type, :system
+#set :rbenv_type, :system
 set :rbenv_ruby,      '3.0.6'
+set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 
-set :rbenv_ruby_dir,  '/home/deploy/.rbenv/versions/3.0.6'
+#set :rbenv_ruby_dir,  '/home/deploy/.rbenv/versions/3.0.6'
 #set :default_env, { 'RBENV_ROOT' => '/home/deploy/.rbenv', 'PATH' => '$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH' }
 
 #set :default_env, { 'RBENV_ROOT' => "$HOME/.rbenv" }
 #set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} RBENV_ROOT=#{fetch(:rbenv_path)}"
 #set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 ##################### try
-set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+#set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
 
-#set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
+
 
 #set :default_env, { 'RBENV_ROOT' => '/home/deploy/.rbenv', 'PATH' => '$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH' }
 
-set :default_env, {
-  'RBENV_ROOT' => '/home/deploy/.rbenv',
-  'PATH' => '$RBENV_ROOT/shims:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/deploy/.rvm/bin:$PATH'
-}
+#set :default_env, {
+#  'RBENV_ROOT' => '/home/deploy/.rbenv',
+#  'PATH' => '$RBENV_ROOT/shims:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/deploy/.rvm/bin:$PATH'
+#}
 
 
 ##########################################################################################################
