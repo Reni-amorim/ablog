@@ -16,7 +16,7 @@ set :rbenv_type, :system
 set :rbenv_ruby,      '3.0.6'
 
 set :rbenv_ruby_dir,  '/home/deploy/.rbenv/versions/3.0.6'
-set :default_env, { 'RBENV_ROOT' => '/home/deploy/.rbenv', 'PATH' => '$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH' }
+#set :default_env, { 'RBENV_ROOT' => '/home/deploy/.rbenv', 'PATH' => '$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH' }
 
 #set :default_env, { 'RBENV_ROOT' => "$HOME/.rbenv" }
 #set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} RBENV_ROOT=#{fetch(:rbenv_path)}"
